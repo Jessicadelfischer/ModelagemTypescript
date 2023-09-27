@@ -1,16 +1,20 @@
-class calculadora {
+export class Calculadora {
+    somar(n1: number, n2: number) {
+        return n1 + n2;
+    };
 
-    n1: number;
-    n2: number;
-    operador: string;
+    subtrair(n1: number, n2: number) {
+        return n1 - n2;
+    };
 
-    constructor (n1: number, n2: number, operador: string){
-        this.n1=n1;
-        this.n2=n2;
-        this.operador=operador;
-    }
+    dividir(n1: number, n2: number) {
+        if (n2 === 0) {
+            console.log("Não pode dividir por zero.")
+        } else { return n1 / n2; }
+    };
 
-    somar(n1: number,n2: number, operador:string){
-        soma=n1+n2;
-    }
+    multiplica(n1: number, n2: number) {
+        return n1 * n2;
+    };
+
 }

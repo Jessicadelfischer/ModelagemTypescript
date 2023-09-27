@@ -1,4 +1,4 @@
-class bola {
+export class Bola {
 
     cor: string;
     circunferencia: number;
