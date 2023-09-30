@@ -5,8 +5,8 @@ import { Contador } from "./Classes/Contador";
 import { BombaCombustivel } from "./Classes/Combustivel";
 
 const bomba = new BombaCombustivel("comum", 2, 1);
-console.log("Total a pagar:",bomba.abastecerPorLitro(3,"comum"));
-console.log("Total de litros",bomba.abastecerPorValor(3, "comum"));
+bomba.abastecerPorLitro(3)
+bomba.abastecerPorValor(3)
 
 
 const calculadora = new Calculadora()

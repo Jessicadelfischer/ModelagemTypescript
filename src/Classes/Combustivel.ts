@@ -1,33 +1,35 @@
 export class BombaCombustivel {
 
-    tipoCombustivel: string;
-    valorLitro: number;
-    quantidadeCombustivel: number;
+    tipoCombustivel: string
+    valorLitro: number
+    quantidadeCombustivel: number
 
     constructor(tipoCombustivel: string, valorLitro: number, quantidadeCombustivel: number) {
-        this.tipoCombustivel = tipoCombustivel;
-        this.valorLitro = valorLitro;
-        this.quantidadeCombustivel = quantidadeCombustivel;
+        this.tipoCombustivel = tipoCombustivel
+        this.valorLitro = valorLitro
+        this.quantidadeCombustivel = quantidadeCombustivel
     }
 
-    abastecerPorValor(valor: number, tipoCombustivel:string ){
-        if (this.tipoCombustivel == "comum") {
-            return valor/this.valorLitro
-        } else if (this.tipoCombustivel == "aditivada") {
-            return valor / this.valorLitro
-        } else {
-            console.log("Tipo de gasolina Invalida!")
-        }
+    abastecerPorValor(valor: number) {
+        console.log("Litros:", valor / this.valorLitro)
     }
 
-    abastecerPorLitro(quantidade: number, tipoCombustivel:string ) {
-        if (this.tipoCombustivel == "comum") {
-            return quantidade*this.valorLitro;
-        } else if (this.tipoCombustivel == "aditivada") {
-            return quantidade*this.valorLitro;
-        } else {
-            console.log("Tipo de gasolina Invalida!")
-        }    
+    abastecerPorLitro(quantidade: number) {
+        console.log("Pago: ", quantidade * this.valorLitro)
     }
+
+    alterarValor(valor: number) {
+        this.valorLitro = valor
+    }
+
+    alterarCombustivel(combustivel: string) {
+        this.tipoCombustivel = combustivel
+    }
+
+    alterarQuantidadeCombustivel(quantidade: number) {
+        this.quantidadeCombustivel = quantidade
+    }
+
+
 }
 
